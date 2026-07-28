@@ -35,3 +35,28 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def prime_checker(num):
+    if num <=1:
+        return False
+
+    divisor = 2
+    while divisor< num:
+        if num % divisor == 0:
+            return False
+        divisor= divisor+ 1
+
+    return True 
+
+def prime():
+  print("START")
+  usersinputs=int(input("Enter a number:"))
+
+  if prime_checker(usersinputs):
+     print(str(usersinputs)+ " is a prime number.")
+  else:
+    print(str(usersinputs)+ " is NOT a prime number.")
+
+if __name__ == "__main__":
+  prime()
+
+ 
