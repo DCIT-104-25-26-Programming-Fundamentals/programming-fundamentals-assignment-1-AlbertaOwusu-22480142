@@ -60,3 +60,55 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def read_matrix():
+    rows= int(input("Enter number of rows: "))
+    cols= int(input("Enter number of columns: "))
+    matrix = []
+    print(f"Enter the matrix values row by row (space-separated):")
+    for i in range(rows):
+        while True : 
+            row_input = input(f"Row {i + 1}: ").split()
+            if len(row_input) != cols:
+                print(f"Error: Row must have exactly {cols} values.")
+                continue
+            row = [float(val) for val in row_input]
+            matrix.append(row)
+            break
+
+    return matrix
+
+
+def transpose_matrix(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+
+    transposed = []
+    for j in range(cols):
+        new_row = []
+        for i in range(rows):
+            new_row.append(matrix[i][j])
+        transposed.append(new_row)
+
+    return transposed
+
+
+def print_matrix(matrix):
+    for row in matrix:
+        print(" ".join(str(val) for val in row))
+
+
+def main():
+    print("PART A: Transpose a Matrix")
+    matrix = read_matrix()
+
+    print("\nOriginal matrix:")
+    print_matrix(matrix)
+
+    transposed = transpose_matrix(matrix)
+
+    print("\nTransposed matrix:")
+    print_matrix(transposed)
+
+
+if __name__ == "__main__":
+    main()
