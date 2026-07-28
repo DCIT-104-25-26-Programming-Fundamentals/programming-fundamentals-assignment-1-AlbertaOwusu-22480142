@@ -57,6 +57,6 @@ def prime():
     print(str(usersinputs)+ " is NOT a prime number.")
 
 if __name__ == "__main__":
-  prime()
+ prime()
 
  
