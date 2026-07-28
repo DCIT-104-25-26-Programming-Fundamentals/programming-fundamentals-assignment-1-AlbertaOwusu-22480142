@@ -61,15 +61,15 @@ def get_grade(score):
         return "F"
 
 def scale():
-     score=int(input("Enter student score (0-100):"))
-     grade=get_grade(score)
+    score=int(input("Enter student score (0-100):"))
+    grade=get_grade(score)
 
-     if grade is None:
+    if grade is None:
             print("Error: Score must be between 0 and 100")
-     else:
+    else:
             print("Grade: "+ grade)
 
 if __name__ == "__main__":
-  scale()
+ scale()
 
     
